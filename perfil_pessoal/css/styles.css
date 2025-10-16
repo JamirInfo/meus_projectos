@@ -8,6 +8,7 @@
 a{
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 /* Navbar */
@@ -30,16 +31,15 @@ a{
     border-radius: 10px;
 }
 
-#nav-links a:hover{
-    color: #8c8c8c;
-    transform: scale(1);
-}
-
 #nav-links{
     display: flex;
     list-style: none;
-    gap: 1rem;
-    transition: 1s;
+    gap: 1.5rem;
+}
+
+#nav-links a:hover{
+    color: #8c8c8c;
+    transition: .3s;
 }
 
 /* Conteúdo Principal */
@@ -47,7 +47,7 @@ a{
     display: flex;
     flex-direction: column;
     padding: 2rem 2.5rem;
-    gap: 5rem;
+    gap: 3rem;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -56,11 +56,12 @@ a{
     display: flex;
     margin: 0 auto;
     align-items: center;
-    gap: 5rem;
+    justify-content: center;
+    gap: 3rem;
 }
 
 #perfil img{
-    width: 25%;
+    max-width: 100%;
     border-radius: 50px;
 }
 
@@ -68,17 +69,85 @@ a{
     margin: .5rem auto 2.5rem;
 }
 
-#perfil a{
+.btn-perfil{
     background-color: #ddd;
     text-align: center;
     width: 150px;
     padding: .5rem 1rem;
     border-radius: 10px;
     cursor: pointer;
+    opacity: .8;
 }
 
-#perfil a:hover{
-    transform: scale(2.2);
+.btn-perfil:hover{
+    opacity: 1;
+    transition: .3s;
 }
 
+#sobre-mim p{
+    padding: 1rem 0;
+}
 
+#info-projectos{
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+}
+
+.post-projecto img, h3, p{
+    padding: .5rem;
+    text-align: justify;
+}
+
+.post-projecto img{
+    width: 100%;
+    border-radius: 35px;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+#social-media{
+    display: flex;
+    gap: .7rem;
+    font-size: 25px;
+    transition: .5s;
+}
+
+/* Tablet - 768px */
+
+@media screen  and (max-width: 768px){
+    #nav-links{
+        gap: 1.5rem;
+    }
+
+    #perfil img {
+    max-width: 50%;
+    }
+
+    #perfil {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #perfil {
+        flex-direction: column;
+    }
+
+    #perfil p {
+        margin: .5rem auto 1.5rem;
+    }
+
+    #info-projectos {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem 0 0;
+    }
+}
